@@ -11,6 +11,11 @@ app.use(express.json());
 // Fake database
 const users = [];
 
+// Test 
+app.get('/ping', (req, res) => {
+    res.send('Pong!');
+  });
+
 // Routes
 app.post('/signup', (req, res) => {
   const { email, password } = req.body;
